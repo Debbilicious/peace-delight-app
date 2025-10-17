@@ -177,10 +177,47 @@ body.dark-mode header {
     box-shadow: 0 2px 5px rgba(255, 255, 255, 0.05);
 }
 
-.logo img {
-    height: 80px; /* Adjust as needed */
-    object-fit: contain;
+
+/* 1. CONTAINER: Ensures the icon and text sit side-by-side and are centered vertically. */
+.logo {
+  display: flex; /* Use Flexbox for horizontal alignment */
+  align-items: center; /* Vertically centers the icon and the text */
+  text-decoration: none;
 }
+
+/* 2. IMAGE ICON: Styles for the actual logo image (icon part). */
+.logo-icon-image {
+  height: 60px; /* Adjust this value to control the logo's overall size */
+  width: auto; /* CRITICAL: Prevents distortion */
+  max-width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 3px; /* Removes any default margin */
+}
+
+/* 3. LOGO TEXT: Styles for the 'Peaceful Delight' text. */
+.logo-text {
+  /* We use var(--color-primary) to match your Nigerian flag green */
+  font-size: 1.2rem; 
+  font-weight: bold; 
+  color: var(--color-primary); 
+  line-height: 1; 
+  transition: color 0.3s;
+  margin: 0; /* Removes default margin */
+  white-space: nowrap; /* Prevents text from wrapping */
+}
+
+/* Mobile size adjustment (since you have a max-width: 480px section) */
+@media (max-width: 480px) {
+  .logo-icon-image {
+    height:50px; /* Slightly smaller icon on mobile */
+  }
+  .logo-text {
+    font-size: 1.3rem; /* Smaller, more manageable text on mobile */
+  }
+}
+/* ---------------------------------------------------- */
+
 
 /* Desktop Navigation */
 .desktop-nav ul {
@@ -1155,7 +1192,40 @@ body.dark-mode .fa-tiktok {
         padding: 3px 0; /* Make link area larger for tapping */
         text-align: center;
     }
-    /* *********************************************** */
+    
+    /* ---------------------------------------------------- */
+/* NEW: List Item and Social Icon Fixes */
+/* ---------------------------------------------------- */
+
+/* Targets the main list item wrappers around "About Us", "Contact", etc. */
+footer .footer-nav ul li {
+    /* KEY FIX: Increase the vertical area for tapping on each link */
+    padding: 10px 0; 
+}
+
+/* Ensure the link itself expands to fill the larger padded area */
+footer .footer-nav ul li a {
+    display: block; 
+    font-size: 1rem; 
+    padding-left: 15px;
+    text-align: center;
+}
+
+
+/* Fix 2: Add breathing room around the Social Icons */
+/* Targets the container holding the Facebook, Instagram, etc., icons */
+footer .social-icons {
+    margin: 20px auto; /* Adds vertical space above/below the icon row */
+    display: flex;
+    justify-content: center; /* Centers the icons horizontally */
+    gap: 20px; /* Spreads the icons out horizontally */
+}
+
+/* Ensure each social icon has a large, comfortable tap area */
+footer .social-icons a {
+    padding: 10px; /* Large tap area around the icon */
+    font-size: 1.6rem; /* Ensures the icons are a good size */
+}
 }
 
 @media (max-width: 480px) {
