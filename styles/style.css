@@ -8,7 +8,7 @@
     /* Primary Colors (Nigerian Flag Inspired) */
     --color-primary: #006400; /* Deep Green */
     --color-secondary: #fff; /* White (used for accents/light text) */
-    --color-accent: Black; /* Red/Orange for action (e.g., buttons) */
+    --color-accent: Black; /* Black for action (e.g., buttons) */
     
     /* Text and Background Defaults (Light Mode) */
     --color-text-primary: #333;
@@ -104,21 +104,21 @@ a:hover {
 */
 
 body.dark-mode {
-    color: var(--dark-color-text-primary); /* Ensures primary text is bright */
+    color: var(--dark-color-text-primary); 
     background-color: var(--dark-color-bg-primary);
 }
 
 body.dark-mode a {
-    color: var(--dark-color-text-secondary); /* Ensures default link color is visible */
+    color: var(--dark-color-text-secondary); 
 }
 body.dark-mode a:hover {
-    color: var(--color-primary); /* Hover remains green */
+    color: var(--color-primary); 
 }
 
 body.dark-mode h1,
 body.dark-mode h2,
 body.dark-mode h3 {
-    color: var(--color-primary); /* Keep primary color for brand consistency */
+    color: var(--color-primary); 
 }
 
 body.dark-mode .card,
@@ -180,44 +180,42 @@ body.dark-mode header {
 
 /* 1. CONTAINER: Ensures the icon and text sit side-by-side and are centered vertically. */
 .logo {
-  display: flex; /* Use Flexbox for horizontal alignment */
-  align-items: center; /* Vertically centers the icon and the text */
+  display: flex; 
+  align-items: center; 
   text-decoration: none;
 }
 
 /* 2. IMAGE ICON: Styles for the actual logo image (icon part). */
 .logo-icon-image {
-  height: 60px; /* Adjust this value to control the logo's overall size */
-  width: auto; /* CRITICAL: Prevents distortion */
+  height: 60px; 
+  width: auto; 
   max-width: 100%;
   display: inline-block;
   vertical-align: middle;
-  margin-right: 3px; /* Removes any default margin */
+  margin-right: 3px; 
 }
 
 /* 3. LOGO TEXT: Styles for the 'Peaceful Delight' text. */
 .logo-text {
-  /* We use var(--color-primary) to match your Nigerian flag green */
+  
   font-size: 1.2rem; 
   font-weight: bold; 
   color: var(--color-primary); 
   line-height: 1; 
   transition: color 0.3s;
-  margin: 0; /* Removes default margin */
-  white-space: nowrap; /* Prevents text from wrapping */
+  margin: 0; 
+  white-space: nowrap; 
 }
 
-/* Mobile size adjustment (since you have a max-width: 480px section) */
+
 @media (max-width: 480px) {
   .logo-icon-image {
-    height:50px; /* Slightly smaller icon on mobile */
+    height:50px; 
   }
   .logo-text {
-    font-size: 1.3rem; /* Smaller, more manageable text on mobile */
+    font-size: 1.3rem; 
   }
 }
-/* ---------------------------------------------------- */
-
 
 /* Desktop Navigation */
 .desktop-nav ul {
@@ -292,7 +290,6 @@ body.dark-mode .theme-toggle, body.dark-mode .mobile-nav-toggle {
     background-color: var(--color-bg-secondary);
     padding: var(--spacing-lg);
     z-index: 1010;
-    /* Ensure it's fully off-screen when inactive */
     transform: translateX(100%); 
     transition: transform 0.3s ease-in-out;
     box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
@@ -359,7 +356,6 @@ footer {
     background-color: var(--color-bg-secondary);
     border-top: 1px solid var(--color-border);
     padding: var(--spacing-md) 0;
-    /* text-align: center; REMOVED: Will be controlled by flexbox */
     color: var(--color-text-secondary);
 }
 body.dark-mode footer {
@@ -370,10 +366,10 @@ body.dark-mode footer {
 
 .footer-content {
     display: flex;
-    flex-direction: column; /* Mobile Default: Stacked vertically */
-    align-items: center; /* Center items on mobile */
+    flex-direction: column; 
+    align-items: center; 
     gap: var(--spacing-sm);
-    text-align: center; /* Ensures text is centered on mobile */
+    text-align: center; 
 }
 
 /* Increased Font Size for P tag */
@@ -384,7 +380,6 @@ footer p {
 
 /* Footer Links Styling */
 .footer-links a {
-    /* Increased Font Size for A tag */
     font-size: 1rem; 
     margin: 0 var(--spacing-xs);
     color: var(--color-text-secondary);
@@ -405,11 +400,11 @@ body.dark-mode .footer-links a {
     display: flex;
     gap: var(--spacing-md);
     padding: var(--spacing-xs) 0;
-    /* NEW: Removed flex-grow/flex-shrink here for mobile clarity */
+   
 }
 
 .footer-social-links a {
-    font-size: 1.5rem; /* Slightly larger icons */
+    font-size: 1.5rem; 
     transition: transform 0.3s;
 }
 .footer-social-links a:hover {
@@ -435,10 +430,10 @@ body.dark-mode .fa-tiktok {
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 } 
 
-/* --- (Rest of the CSS code remains the same, included here for completeness) --- */
+
 
 /* ======================================================
-4. UTILITY & BUTTONS (No changes needed)
+4. UTILITY & BUTTONS 
 ======================================================
 */
 
@@ -533,7 +528,7 @@ body.dark-mode .fa-tiktok {
 
 
 /* ======================================================
-6. HOME PAGE SECTIONS (No changes needed)
+6. HOME PAGE SECTIONS 
 ======================================================
 */
 
@@ -638,7 +633,7 @@ body.dark-mode .fa-tiktok {
 
 
 /* ======================================================
-7. MENU PAGE STYLES (No changes needed)
+7. MENU PAGE STYLES 
 ======================================================
 */
 
@@ -779,7 +774,7 @@ body.dark-mode .fa-tiktok {
 
 
 /* ======================================================
-8. GALLERY PAGE STYLES (No changes needed)
+8. GALLERY PAGE STYLES 
 ======================================================
 */
 
@@ -895,7 +890,7 @@ body.dark-mode .fa-tiktok {
 
 
 /* ======================================================
-9. CONTACT & RESERVATION (FORMS) STYLES (No changes needed)
+9. CONTACT & RESERVATION (FORMS) STYLES
 ======================================================
 */
 
@@ -994,25 +989,25 @@ body.dark-mode .fa-tiktok {
     font-weight: bold;
     margin-bottom: var(--spacing-xs);
     font-size: 1rem;
-    display: block; /* Make sure legend takes full width */
+    display: block; 
 }
 
 /* Star Rating Container Setup */
 .rating-stars {
     display: flex;
-    flex-direction: row-reverse; /* Important: Puts 5-star label first in the source order */
+    flex-direction: row-reverse; 
     justify-content: center;
     gap: 5px;
     margin-bottom: 10px;
 }
 
 .rating-stars input {
-    display: none; /* Hide radio buttons */
+    display: none; 
 }
 
 .rating-stars label {
     font-size: 2rem;
-    color: #bbb; /* Default grey star, using high-contrast color for dark mode compatibility */
+    color: #bbb; 
     cursor: pointer;
     transition: color 0.2s ease;
 }
@@ -1086,10 +1081,8 @@ body.dark-mode .fa-tiktok {
 }
 
 @media (min-width: 992px) {
-    /* ABOUT PAGE LAYOUT FIX: Two-column grid for desktop */
     .about-grid-wrapper {
         display: grid;
-        /* Image on the left (1fr), Text blocks on the right (1fr) */
         grid-template-columns: 1fr 1fr; 
         gap: var(--spacing-lg);
         align-items: start; 
@@ -1111,25 +1104,24 @@ body.dark-mode .fa-tiktok {
         display: none;
     }
     
-    /* General Form Layout */
+    
     .contact-wrapper {
         grid-template-columns: 1.5fr 2fr;
     }
 
     /* NEW FOOTER LAYOUT FOR DESKTOP */
     .footer-content {
-        flex-direction: row; /* Switch to horizontal layout */
-        justify-content: space-between; /* Space out the three items */
-        align-items: center; /* Vertically center items */
+        flex-direction: row; 
+        justify-content: space-between; 
+        align-items: center; 
         text-align: left;
     }
 
     .footer-content p {
-        flex-shrink: 0; /* Ensure copyright text doesn't shrink */
+        flex-shrink: 0; 
     }
 
     .footer-social-links {
-        /* Let social links take up the middle space and center the icons */
         flex-grow: 1;
         justify-content: center; 
         margin: 0; 
@@ -1161,7 +1153,6 @@ body.dark-mode .fa-tiktok {
         font-size: 1.1rem;
     }
 
-    /* Contact/Reservation Form Layout */
     .reservation-form .form-grid {
         grid-template-columns: 1fr;
     }
@@ -1170,40 +1161,31 @@ body.dark-mode .fa-tiktok {
         grid-template-columns: 1fr;
     }
     
-    /* Footer Stack (Mobile Layout Adjustments) */
+    
     .footer-content {
         gap: var(--spacing-md);
     }
     
-    /* *********************************************** */
-    /* *** MOBILE FOOTER NAVIGATION FIX (UX Improvement) *** */
-    /* *********************************************** */
     .footer-links {
         display: flex;
-        flex-direction: column; /* KEY FIX: Stack links vertically for easier tapping */
-        align-items: center; /* Center the stacked links */
+        flex-direction: column; 
+        align-items: center; 
         gap: 5px; 
-        white-space: normal; /* Allow wrapping of container */
+        white-space: normal; 
     }
     
     .footer-links a {
         border-bottom: none;
         margin: 0; 
-        padding: 3px 0; /* Make link area larger for tapping */
+        padding: 3px 0; 
         text-align: center;
     }
     
-    /* ---------------------------------------------------- */
-/* NEW: List Item and Social Icon Fixes */
-/* ---------------------------------------------------- */
-
-/* Targets the main list item wrappers around "About Us", "Contact", etc. */
 footer .footer-nav ul li {
-    /* KEY FIX: Increase the vertical area for tapping on each link */
     padding: 10px 0; 
 }
 
-/* Ensure the link itself expands to fill the larger padded area */
+
 footer .footer-nav ul li a {
     display: block; 
     font-size: 1rem; 
@@ -1212,19 +1194,17 @@ footer .footer-nav ul li a {
 }
 
 
-/* Fix 2: Add breathing room around the Social Icons */
-/* Targets the container holding the Facebook, Instagram, etc., icons */
 footer .social-icons {
-    margin: 20px auto; /* Adds vertical space above/below the icon row */
+    margin: 20px auto; 
     display: flex;
-    justify-content: center; /* Centers the icons horizontally */
-    gap: 20px; /* Spreads the icons out horizontally */
+    justify-content: center; 
+    gap: 20px; 
 }
 
-/* Ensure each social icon has a large, comfortable tap area */
+
 footer .social-icons a {
-    padding: 10px; /* Large tap area around the icon */
-    font-size: 1.6rem; /* Ensures the icons are a good size */
+    padding: 10px; 
+    font-size: 1.6rem; 
 }
 }
 
